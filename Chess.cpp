@@ -272,7 +272,22 @@ main(){
             cout<<"Good bye."<<endl;
             break;
         }
+if(pick_side == "b")
+            game.AIMove();
+        else
+            game.printBoard();
 
+        while(gameon = game.promptInput()){
+            if(!game.hasKing()){
+                cout<<"* You are victorious!"<<endl;
+                break;
+            }
+            game.AIMove();
+            if(!game.hasKing()){
+                cout<<"* You are defeated!"<<endl;
+                break;
+            }
+           
         
         }
     }
